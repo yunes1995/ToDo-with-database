@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./stylesheets/style.css">
-  <title>Welcome to the server</title>
-</head>
+  <body>
+    <div class="container">
+      <div class="BoxAdding">
+        <div class="form-group">
+          <label for="itemInput" class="AddLable">Add Item :</label>
+          <input type="text" class="form-control" name="" id="itemInput" />
+        </div>
+        <button id="addButton">Add To List</button>
+      </div>
 
-<body>
-  <h1>Hello</h1>
-  <a href="http://localhost:3000/todo">To Do</a>
-  <br />
-  <a href="http://localhost:3000/calculator">Calculator</a>
-</body>
+      <ul id="todoList"></ul>
+    </div>
 
+    <div class="server-btn">
+      <button class="btn-server btn-server-download">Download</button>
+      <button class="btn-server btn-server-upload">Upload</button>
+    </div>
+
+    <button id="clearButton">Clear Todo List</button>
+
+    <script src="./srcipt/script.js"></script>
+  </body>
 </html>

@@ -1,8 +1,209 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(../img/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* min-width: 1440px; */
 }
 
-a {
-  color: #00B7FF;
+.container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  top: 300px;
+  position: relative;
+
 }
+
+/* .BoxAdding{
+  margin-left: 425px;
+  margin-top: 200px;
+} */
+.form-control {
+  width: 100px;
+}
+
+.AddLable {
+  position: relative;
+  font-size: 30px;
+  color: #a9c7dd;
+  top: 3px;
+  right: 14px;
+}
+
+.form-control {
+  width: 237px;
+  height: 24px;
+}
+
+#addButton {
+  position: relative;
+  top: -30px;
+  right: -395px;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#todoList {
+  position: absolute;
+  margin-top: 105px;
+  width: 434px;
+  height: 306px;
+  /* background-color: #c91b1b; */
+  list-style: none;
+  overflow: overlay;
+}
+
+#todoList label {
+  margin-right: 150px;
+  font-size: 15px;
+  font-size: 20px;
+}
+
+#todoList button {
+  margin-right: 4px;
+}
+
+#addButton:hover {
+  background-color: rgba(255, 255, 0, 0.596);
+  border: none;
+  padding: 5px;
+}
+
+/* #todoList li{
+  border: 1px solid black;
+  padding: 5px;
+  margin: 4px;
+  background-color: aqua;
+  
+} */
+.completed {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 4px;
+  background-color: rgba(102, 255, 0, 0.377);
+}
+
+#clearButton {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 8px;
+}
+
+#clearButton:hover {
+  background-color: rgba(255, 0, 0, 0.644);
+}
+
+.uncompleted {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 4px;
+  background-color: orange;
+  color: black;
+  text-decoration: line-through;
+}
+
+.btnSuccess {
+  /* background-color: rgb(192, 192, 192); */
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid silver;
+}
+
+.btnSuccess:hover {
+  background-color: rgba(0, 128, 0, 0.692);
+  color: rgba(255, 0, 0, 0.726);
+}
+
+.btnDelet {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid orange;
+}
+
+.btnDelet:hover {
+  background-color: orangered;
+}
+
+.EditBtn {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid peru;
+}
+
+.EditBtn:hover {
+  background-color: peru;
+}
+
+@media screen and (max-width: 1900px) {
+  .container {
+    top: 250px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    top: 220px;
+  }
+}
+
+.server-btn {
+  background-color: #3f554e;
+  width: 155px;
+  padding: 10px;
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  box-shadow: 0px 0px 9px #baa965;
+  border-radius: 8px;
+}
+
+.btn-server-download{
+  margin-right: 14px;
+}
+
+.btn-server {
+  background-color: #bdc3c7;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+.btn-server:hover{
+  border: 1px solid silver;
+  padding: 8px;
+}
+
+.btn-server-download:hover{
+  background-color: #65ba70d2;
+}
+
+.btn-server-upload:hover{
+  background-color: #6591bad8;
+}
+/* #todoList label{
+    width: 80%;
+  }
+  #todoList li{
+    list-style-type: none;
+  }
+  .completed{
+  
+  }
+  .uncompleted label{
+    color: #afa7a7;
+    text-decoration: line-through;
+  }
+  #todoList .btn{
+    margin-left: 10px;
+  } */
