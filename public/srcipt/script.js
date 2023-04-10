@@ -1,7 +1,3 @@
-// const { download } = require("express/lib/response");
-
-// const { json } = require("express");
-
 
 let $ = document;
 let AddTask = $.getElementById("addButton");
@@ -144,47 +140,23 @@ function EditTask(todoIDEdit){
 
 
 // download btn 
+
 const Download = document.getElementById('download-btn');
 Download.addEventListener("click", downloadTask);
 
 function downloadTask(){
-//     localStorage.removeItem("items");
-//   const itemsToRemove = document.querySelectorAll(".items .todo-item");
-//   itemsToRemove.forEach((remove) => {
-//     remove.remove();
-//   });
+    localStorage.removeItem("ToDos");
+  const itemsToRemove = document.querySelectorAll(".items .todo-item");
+  itemsToRemove.forEach((remove) => {
+    remove.remove();
+  });
   fetch("http://localhost:3000/database/download")
     .then((response) => response.json())
     .then((counts) => {
-      counts.forEach((count) => {
-        createTodo(count.value, count.isdone, count.id, false);
-      });
-    //   openingmodal2();
+       TodoGenerator(counts);
+       saveInLocal(counts);
     });
 }
-
-
-// function AddToDo() {
-//     let inputValue = input.value;
-//     if (inputValue == "") {
-//         alert("inter task");
-//     } else {
-//         let objTask = {
-//             id: ArrayForSave.length + 1,
-//             content: inputValue,
-//             compelet: false,
-//             // edit : false,
-//         }
-
-//         ArrayForSave.push(objTask);
-
-//         TodoGenerator(ArrayForSave);
-//         saveInLocal(ArrayForSave);
-//         input.value = "";
-//         input.focus();
-
-//     }
-// }
 
 // upload btn 
 const Upload = document.getElementById('upload-btn');
