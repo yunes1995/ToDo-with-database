@@ -15,7 +15,7 @@ router.post("/upload", (req, res) => {
       return;
     }
   );
-  res.send("Success");
+  res.send({ 'response': 'Success' });
 });
 
 /**
