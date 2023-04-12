@@ -17,7 +17,6 @@ function AddToDo() {
             id: ArrayForSave.length + 1,
             content: inputValue,
             compelet: false,
-            // edit : false,
         }
 
         ArrayForSave.push(objTask);
@@ -41,7 +40,11 @@ function TodoGenerator(Task) {
         let newLable = $.createElement("label");
         newLable.className = "lbl"
         newLable.innerText = todo.content;
-
+        
+        // for test 
+        let parentDiv = $.createElement("div");
+        parentDiv.className = "parentdiv";
+        // for test 
         let completeButton = $.createElement("button");
         completeButton.className = "btnSuccess";
         completeButton.innerText = "Completed"
@@ -56,8 +59,8 @@ function TodoGenerator(Task) {
         EditButtom.classList = "EditBtn";
         EditButtom.innerText = "Edit";
         EditButtom.setAttribute("onclick" , `EditTask(${todo.id})`)
-
-        newTask.append(newLable, completeButton, DeleteButton ,EditButtom);
+        parentDiv.append(completeButton, DeleteButton ,EditButtom)
+        newTask.append(newLable, parentDiv);
         ToDoDiv.append(newTask);
 
         if(todo.compelet){
@@ -182,67 +185,3 @@ function uploadTask(){
         console.warn("Something went wrong.", error);
       });
 }
-
-
-
-
-// test code 
-
-// const download = () => {
-//     localStorage.removeItem("items");
-//     const itemsToRemove = document.querySelectorAll(".items .todo-item");
-//     itemsToRemove.forEach((remove) => {
-//       remove.remove();
-//     });
-//     fetch("http://localhost:3000/todo/database/download")
-//       .then((response) => response.json())
-//       .then((counts) => {
-//         counts.forEach((count) => {
-//           createTodo(count.value, count.isdone, count.id, false);
-//         });
-//         openingmodal2();
-//       });
-//   };
-  
-//   const upload = () => {
-//     const items = document.querySelectorAll(".items .todo-item");
-//     let JSONforServer = [];
-//     items.forEach((item) => {
-//       const id = item.id;
-//       const value = item.querySelector(".task").value;
-//       const isdone = item.classList.contains("done-item") ? true : false;
-//       const todoObject = {
-//         id: id,
-//         value: value,
-//         isdone: isdone,
-//       };
-//       JSONforServer.push(todoObject);
-//     });
-//     fetch("http://localhost:3000/todo/database/upload", {
-//       method: "POST",
-//       body: JSON.stringify(JSONforServer),
-//       headers: {
-//         "Content-type": "application/json; charset=UTF-8",
-//       },
-//     })
-//       .then(function (response) {
-//         if (response.ok) {
-//           return response.json();
-//         }
-//         return Promise.reject(response);
-//       })
-//       .then(() => {
-//         openingmodal1();
-//       })
-//       .catch(function (error) {
-//         console.warn("Something went wrong.", error);
-//       });
-//   };
-
-// const labeltest = document.querySelectorAll(".lbl");
-// console.log(labeltest)
-// // const test1 = ()=>{
-   
-// //     console.log(labeltest);
-// // }
-// // test1();
