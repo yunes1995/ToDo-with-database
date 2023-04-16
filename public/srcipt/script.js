@@ -185,3 +185,51 @@ function uploadTask(){
         console.warn("Something went wrong.", error);
       });
 }
+
+
+//menu bar
+let getAllTaskLink = document.getElementById("AllTask");
+let getActiveLink = document.getElementById("ActiveLink");
+let getCompletedTaskLink = document.getElementById("CompletedTask");
+
+function AllTask(){
+  
+    getAllTaskLink.style.color = "yellow";
+    getActiveLink.style.color = "#818181";
+    getCompletedTaskLink.style.color = "#818181";
+    const getPtask = document.querySelectorAll(".well");
+    getPtask.forEach(task =>{
+        task.style.display = "block";
+    });
+}
+function ActiveTask(){
+    
+    getAllTaskLink.style.color = "#818181";
+    getActiveLink.style.color = "red";
+    getCompletedTaskLink.style.color = "#818181";
+
+    const getPtask = document.querySelectorAll(".well");
+    getPtask.forEach(task =>{
+        task.style.display = "block";
+        if(task.classList.contains("uncompleted")){
+            task.style.display = "none";
+        }
+    });
+
+}
+function DoneTask(){
+
+    
+    getAllTaskLink.style.color = "#818181";
+    getActiveLink.style.color = "#818181";
+    getCompletedTaskLink.style.color = "green";
+    const getPtask = document.querySelectorAll(".well");
+    getPtask.forEach(task =>{
+        task.style.display = "block";
+        if(task.classList.contains("completed")){
+            task.style.display = "none";
+        }
+    });
+console.log("3");
+}
+

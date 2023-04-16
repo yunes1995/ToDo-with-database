@@ -145,13 +145,13 @@ body {
   width: 155px;
   padding: 10px;
   position: absolute;
-  bottom: 5%;
+  bottom: 13%;
   left: 2%;
   box-shadow: 0px 0px 9px #baa965;
   border-radius: 8px;
 }
 
-.btn-server-download{
+.btn-server-download {
   margin-right: 14px;
 }
 
@@ -164,24 +164,49 @@ body {
   font-weight: bolder;
 }
 
-.btn-server:hover{
+.btn-server:hover {
   border: 1px solid silver;
   padding: 8px;
 }
 
-.btn-server-download:hover{
+.btn-server-download:hover {
   background-color: #65ba70d2;
 }
 
-.btn-server-upload:hover{
+.btn-server-upload:hover {
   background-color: #6591bad8;
 }
-  .well{
-    padding: 10px;
-    position: relative;
-  }
-  .parentdiv{
-    position: absolute;
-    right: 2%;
-    top: 18%;
-  }
+
+.well {
+  padding: 10px;
+  position: relative;
+}
+
+.parentdiv {
+  position: absolute;
+  right: 2%;
+  top: 18%;
+}
+
+/*menubar */
+
+.menubar-btn {
+  cursor: pointer;
+}
+
+.classification {
+  bottom: 5%;
+  position: absolute;
+  background-color: #44426000;
+  padding: 17px;
+  left: 2%;
+  border-radius: 10px;
+  box-shadow: 0px 1px 12px cornflowerblue;
+}
+
+.classification a {
+  margin-right: 13px;
+  font-size: 18px;
+  font-family: math;
+  color: antiquewhite;
+}
